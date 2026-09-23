@@ -99,12 +99,12 @@ fprintf('  (L/D)cruise = %.2f\n', LD_cruise);
 fprintf('  T/W at cruise = 1/(L/D)cruise = %.4f\n', TW_cruise);
 
 %% ========== 3. THRUST LAPSE -> TAKEOFF T/W FROM CRUISE ==========
-Wcr_Wto = 0.956;   % Raymer: fuel burned during takeoff + climb
+Wcr_Wto = 0.956;   % Raymer: fuel burned during takeoff + climb %table 3.2
 TW_to_cruiseMatch = TW_cruise * Wcr_Wto / T_lapse;
 
 fprintf('\n--- 3. TAKEOFF T/W FROM CRUISE MATCHING (Eq. 5.3) ---\n');
 fprintf('  W_cruise/W_takeoff = %.3f\n', Wcr_Wto);
-fprintf('  T_cruise/T_takeoff = %.3f\n', T_lapse);
+fprintf('  T_cruise/T_takeoff = %.3f\n', T_lapse);   %fig 5.1
 fprintf('  T/W_takeoff = %.4f\n', TW_to_cruiseMatch);
 
 %% ========== 4. T/W FROM CLIMB REQUIREMENT ==========
